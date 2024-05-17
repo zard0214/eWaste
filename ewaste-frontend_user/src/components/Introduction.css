@@ -1,0 +1,99 @@
+.intro-header {
+    position: relative;
+    background-color: transparent;
+    height: 850px; /* 设置 header 的高度 */
+}
+
+.intro-header h1 {
+    text-align: center;
+    color: white;
+    font-size: 25vw;
+    padding-top: 100px; /* 调整标题的位置 */
+    margin: 0;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.intro-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.intro-menu h3 {
+    margin: 0 10px; /* 调整 h3 元素之间的间距 */
+    cursor: pointer;
+    color:white;
+}
+
+#background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.8;
+    background-size:cover;
+}
+
+.intro-info {
+    position: relative;
+    background-color: transparent;
+    height: 850px; /* 设置 header 的高度 */
+}
+
+.intro-info h1 {
+    position: absolute;
+    color: white;
+    font-size: 3vw;
+    margin-left: 100px;
+    bottom: 250px;
+    text-shadow: 2px 2px 4px #000000;
+}
+.intro-info h4 {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    margin-left: 100px;
+    bottom: 100px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#intro-button{
+    position: absolute;
+    font-size: 18px;
+    bottom: 50px;
+    margin-left:100px
+}
+
+@media (max-width: 992px) {
+    .intro-info h4 {
+        display: none;
+    }
+    .intro-info h1 {
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        bottom: 150px;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    .intro-header h1 {
+        color: white;
+        font-size: 20vw;
+        padding-top: 30px; /* 调整标题的位置 */
+        margin: 0;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    .intro-header {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+    .intro-info {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+}

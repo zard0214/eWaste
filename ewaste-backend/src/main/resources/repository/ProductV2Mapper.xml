@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="uk.shef.msc8.ewaste.domain.product.repository.mapper.ProductV2Mapper">
+
+    <select id="searchProductsV2" resultType="uk.shef.msc8.ewaste.domain.product.repository.po.ProductV2PO" parameterType="String">
+        select distinct p.*
+        from t_productV2 p
+                 left join t_brand b on p.brand_id = b.id
+                 left join t_series s on p.series_id = b.id
+        where (p.is_deleted = 0 and p.visibility = 1) and (lower(b.name) like lower(concat('%',#{keyword},'%'))
+           or lower(s.name) like lower(concat('%',#{keyword},'%'))or lower(p.type) like lower(concat('%',#{keyword},'%')))
+    </select>
+
+    <select id="searchProductsV2ByType" resultType="uk.shef.msc8.ewaste.domain.product.repository.po.ProductV2PO" parameterType="String">
+        select distinct p.*
+            from t_productV2 p
+                     left join t_brand b on p.brand_id = b.id
+                     left join t_series s on p.series_id = b.id
+        where p.is_deleted = 0 and p.visibility = 1 and lower(p.type) like lower(concat('%',#{keyword},'%'))
+    </select>
+
+
+</mapper>

@@ -1,0 +1,56 @@
+.table-title{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-btn{
+    background-color: rgba(126, 206, 255, 0.7);
+    border: 1px solid #bebebe;
+    font-size: 1em;
+}
+
+.add-btn:hover{
+    background-color: #3aadff;
+}
+
+.add-btn:active{
+    background-color: #0f96f6;
+}
+
+.form-container{
+    /*min-height: 100vh;*/
+    /*position: relative;*/
+    padding-top: 10px;
+    background: rgba(255,255,255,0.6);
+    /*background: #2da94f;*/
+}
+
+.submit-btn-div{
+    justify-content: end;
+    display: flex;
+}
+
+.form-rows{
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.unknown-row{
+    background-color: #ffa6a6;
+}
+
+.photo-preview {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-right: 10px; /* Adjust as necessary */
+}
+
+.photo-image {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin-right: 10px; /* Adjust as necessary */
+    margin-left: 120px; /* Adjust as necessary */
+}

@@ -1,0 +1,44 @@
+{
+  "name": "ewaste",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.8.1",
+    "@ant-design/pro-components": "^2.6.48",
+    "@umijs/route-utils": "^2.2.2",
+    "antd": "^5.13.2",
+    "antd-style": "^3.6.1",
+    "bootstrap": "^5.3.3",
+    "echarts": "^5.5.0",
+    "jspdf": "^2.5.1",
+    "particles-bg": "^2.5.5",
+    "react": "^16.8.4",
+    "react-currency-input-field": "^3.8.0",
+    "react-dom": "^16.8.4",
+    "react-grid-layout": "^1.4.4",
+    "react-router-dom": "^4.3.1",
+    "react-s-alert": "^1.4.1",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "start": "PORT=3001 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10"
+  }
+}

@@ -1,0 +1,94 @@
+/* ProductModal.css */
+.productModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: white;
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modalHeader {
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.closeModal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modalBody {
+    padding: 20px;
+    text-align: center;
+}
+
+.modalProductImage {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.modalProductName {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modalProductPrice {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modalProductPrice span {
+    font-weight: bold;
+    color: #000;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.checkoutButton, .basketButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+}
+
+.basketButton {
+    background-color: #ccc;
+    color: #333;
+}
+
+.checkoutButton:hover, .basketButton:hover {
+    opacity: 0.85;
+}

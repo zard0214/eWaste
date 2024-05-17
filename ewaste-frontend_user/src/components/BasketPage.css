@@ -1,0 +1,181 @@
+/* Basket container that holds everything */
+.basket-container {
+    display: flex;
+    margin: 20px;
+    margin-bottom: 403px;
+}
+
+/* Container for the basket items */
+.basket-items {
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Spacing between items and summary */
+}
+
+/* Individual basket item styles */
+.basket-item {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    /*margin-bottom: 525px;*/
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+/* Basket item image styles */
+.item-image {
+    width: 120px; /* Adjust to match your design */
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Details about the basket item */
+.item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-top, .item-middle, .item-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Item name and price container */
+.item-name, .item-price {
+    margin-bottom: 5px;
+}
+
+.item-qty {
+    margin-bottom: 5px;
+}
+
+/* Item delivery option styling (newly added) */
+.item-delivery {
+    margin-bottom: 5px;
+}
+
+/* Free delivery text styling (newly added) */
+.item-free-delivery {
+    color: #28a745; /* Bootstrap success color for free delivery text */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.item-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Button to remove item from basket */
+.item-remove {
+    /*padding: 5px 10px;*/
+    /*background-color: #dc3545;*/
+    /*color: white;*/
+    /*border: none;*/
+    /*border-radius: 4px;*/
+    /*cursor: pointer;*/
+    padding: 5px 10px; /* 增大按钮的填充 */
+    font-size: 1.0rem; /* 增大字体大小 */
+    font-weight: bold;
+    cursor: pointer;
+    border: none; /* 移除边框 */
+    border-radius: 20px; /* 圆角 */
+    background-color: #dc3545; /* 默认蓝色背景 */
+    color: #fff; /* 白色文本 */
+    margin-bottom: 1px; /* 与下一个按钮的间距 */
+    width: 100%; /* 宽度 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    transition: background-color 0.3s; /* 平滑的背景颜色过渡效果 */
+}
+
+.item-remove button:hover {
+    background-color: #bd2130;
+}
+
+/* Styles for the basket summary section */
+.basket-summary {
+    width: 300px; /* Fixed width for the summary */
+    height: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Styles for the checkout button */
+.checkout-button {
+    padding: 10px 20px; /* 增大按钮的填充 */
+    font-size: 1.0rem; /* 增大字体大小 */
+    font-weight: bold;
+    cursor: pointer;
+    border: none; /* 移除边框 */
+    border-radius: 20px; /* 圆角 */
+    background-color: #007bff; /* 默认蓝色背景 */
+    color: #fff; /* 白色文本 */
+    margin-bottom: 1px; /* 与下一个按钮的间距 */
+    width: 100%; /* 宽度 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    transition: background-color 0.3s; /* 平滑的背景颜色过渡效果 */
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the continue shopping link */
+.continue-shopping {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.continue-shopping:hover {
+    text-decoration: underline;
+}
+
+/* Styles for when the basket is empty */
+.basket-empty {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+}
+
+/* General styles for the item name and price */
+.item-name, .item-price {
+    font-size: 1em;
+}
+
+/* Clear float styles for the basket summary */
+.basket-summary::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Styles for the total label and value */
+.total-label, .total-value {
+    display: block;
+    text-align: right;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Ensure the image doesn't stretch */
+.item-image {
+    object-fit: contain;
+}
+

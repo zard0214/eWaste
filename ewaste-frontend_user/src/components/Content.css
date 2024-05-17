@@ -1,0 +1,210 @@
+.name-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; /* Adjust as necessary */
+}
+
+.name-container h1 {
+  font-weight: bold; /* Makes text bold */
+  font-style: italic; /* Makes text italic */
+  color: white;
+  /* Add any other styling you require */
+}
+
+/*.content::after {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  right: 0; !* 背景对齐到右边 *!*/
+/*  top: 0;*/
+/*  bottom: 0;*/
+/*  width: 50%; !* 或者根据需要调整宽度 *!*/
+/*  background: url('../pictures/samsung.jpeg') no-repeat center center;*/
+/*  background-size: cover;*/
+/*  opacity: 0.5; !* 调整透明度 *!*/
+/*  z-index: -1; !* 确保背景在内容下方 *!*/
+/*}*/
+
+.content {
+  overflow-y: auto;
+  background-color: white;
+  position: relative;
+}
+
+.detail-sections, .button-container {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-selection-container {
+  background-color: #d3d3d3;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.brand-selection {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Allows for horizontal scrolling */
+  width: 100%; /* Adjust to the width that should be visible */
+  scroll-behavior: smooth;
+}
+
+.brand-square {
+  width: 220px; /* Adjust size accordingly */
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;/* Adjust size accordingly */
+  background-color: white;
+  border-radius: 3%;
+  margin-right: 20px; /* Space between squares */
+  flex: 0 0 auto; /* Prevent squares from shrinking */
+  /* Other styles */
+}
+
+.brand-logo {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: contain;
+}
+
+.scroll-button {
+  cursor: pointer; /*to indicate the image is clickable
+// Add any other necessary styles, but keep it minimal as per your requirements*/
+}
+
+.detail-sections {
+  text-align: left; /* Align details to the left */
+}
+
+.detail {
+  margin-bottom: 40px; /* Space between detail labels */
+  font-size: 25px; /* 设置字体大小为18像素 */
+  color: #333333; /* 设置颜色为浅灰色 */
+  font-family: Arial, sans-serif; /* 更换字体为Arial或sans-serif字体 */
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* This will space out your buttons */
+  align-items: center; /* This will vertically center your buttons */
+  padding: 20px; /* Add padding as necessary */
+}
+
+.cancel-button {
+  cursor: pointer;
+  width: 50px; /* 设置与continue按钮相同的宽度 */
+  height: 50px; /* 设置与continue按钮相同的高度 */
+  margin-bottom: 20px;
+}
+
+.continue-button {
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 60px; /* 设置按钮宽度为60像素 */
+  height: 60px;
+  float: right;
+  margin-right: 20px;
+}
+
+
+/*input field*/
+.input-field {
+  width: 97%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(194, 194, 194, 0.22);
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.input-field:focus {
+  background-color: rgba(0,0,0,0.05); /* Light background on focus for visibility */
+}
+
+.input-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  resize: vertical; /* Allows vertical resize */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.input-textarea:focus {
+  background-color: rgba(0,0,0,0.05); /* Light background on focus for visibility */
+}
+
+.input-file {
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  transition: box-shadow 0.3s; /* Smooth transition for box-shadow */
+}
+
+.input-file:focus {
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25); /* Box shadow like a border on focus */
+}
+
+.input-field::placeholder, .input-textarea::placeholder {
+  font-style: italic; /* 斜体 */
+  font-family: cursive; /* 花体字 */
+  /* 如果有特定的花体字型你想使用，确保它被加载到你的页面中并在这里引用它 */
+}
+
+.photo-upload-button {
+  width: 60px; /* 设为正方形 */
+  height: 60px; /* 设为正方形 */
+  background-color: #D3D3D3; /* 灰色背景 */
+  border: none; /* 去除边框 */
+  cursor: pointer; /* 更改光标样式 */
+  text-indent: -999px; /* 隐藏默认文本 */
+  overflow: hidden; /* 隐藏溢出内容 */
+  white-space: nowrap; /* 防止白空间换行 */
+  /* 更多你需要的样式 */
+}
+
+.photo-upload-button::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.photo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.photo-preview {
+  position: relative;
+  margin-right: 10px; /* Adjust as necessary */
+}
+
+.photo-image {
+  max-width: 100px; /* Adjust as necessary */
+  max-height: 100px; /* Adjust as necessary */
+  object-fit: cover;
+}
+
+.remove-photo-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjust as necessary */
+  padding: 0 5px;
+  height: 20px; /* Adjust as necessary */
+}

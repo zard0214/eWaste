@@ -1,0 +1,248 @@
+/* ProductDetail.css */
+
+/* Make sure the container takes full viewport height and allows scrolling */
+.product_container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0px;
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.product_container .container {
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 0px;
+}
+
+.light-gray-background {
+  background-color: #f5f5f5; /* 浅灰色，根据你的需求可能需要调整 */
+  /*padding: 20px; !* 如果需要，添加适量的内边距 *!*/
+  width: 100%;
+}
+
+/* Make the image gallery a bit larger and ensure it takes up more space */
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  max-width: 50%;
+  max-height: 50vh;
+  margin-bottom: 20px;
+  flex: 1.5;
+}
+
+.gallery img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.gallery .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    max-width: 100%;
+  }
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.rows {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  align-items: flex-start; /* Align items to the top */
+}
+
+/* Stack the buttons vertically and align them to the left */
+.details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left by default */
+  width: 100%; /* Ensure the details container takes full width */
+  border-bottom: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+.details .section-divider {
+  border-bottom: 1px solid #ccc; /* 添加横线 */
+  width: 100%; /* 全宽 */
+  margin: 20px 0; /* 在横线上下添加一些外边距 */
+}
+
+.section-divider {
+  border-bottom: 1px solid #ccc; /* 添加横线 */
+  width: 100%; /* 全宽 */
+  margin: 10px 0; /* 在横线上下添加一些外边距 */
+}
+
+/* Style for the new information section at the bottom of details */
+.info-section .shipping, .info-section .delivery, .info-section .returns, .info-section .payments {
+  margin-bottom: 10px; /* Add space between each information row */
+}
+
+.info-section .payments img {
+  height: 50px; /* 增大图标高度 */
+  width: auto; /* 宽度会基于图片的原始宽高比自动调整 */
+  margin-right: 10px; /* 保持图标之间的间距 */
+}
+
+/*.details h1 {*/
+
+/*  padding-bottom: 10px; !* 添加一些内边距以便横线与文本有空隙 *!*/
+/*  margin-bottom: 10px; !* 在标题下方添加一些外边距 *!*/
+/*}*/
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Align the actions to the right */
+.actions {
+  display: flex;
+  flex-direction: column; /* Default background to white */
+  align-items: flex-end; /* Align buttons to the right */
+  gap: 18px; /* Add space between buttons */
+  margin-left: auto; /* Push the action buttons to the right */
+  margin-bottom: 10px;
+}
+
+/*.actions button {*/
+/*  padding: 10px 20px;*/
+/*  cursor: pointer;*/
+/*  border: none; !* Remove borders *!*/
+/*  border-radius: 3%;*/
+/*  background-color: #f5f5f5;*/
+/*  width: fit-content; !* Make the button width fit its content *!*/
+/*}*/
+
+/*.actions button:hover {*/
+/*  background-color: #A9A9A9; !* 颜色变深 *!*/
+/*}*/
+
+/*.actions button .buy-now {*/
+/*  background-color: #007bff; !* 蓝色背景 *!*/
+/*}*/
+
+.actions button {
+  padding: 10px 20px; /* 增大按钮的填充 */
+  font-size: 1.0rem; /* 增大字体大小 */
+  font-weight: bold;
+  cursor: pointer;
+  border: none; /* 移除边框 */
+  border-radius: 20px; /* 圆角 */
+  background-color: #007bff; /* 默认蓝色背景 */
+  color: #fff; /* 白色文本 */
+  margin-bottom: 1px; /* 与下一个按钮的间距 */
+  width: 100%; /* 宽度 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  transition: background-color 0.3s; /* 平滑的背景颜色过渡效果 */
+
+}
+
+/* 鼠标悬停效果 */
+.actions button:hover {
+  background-color: #0056b3; /* 鼠标悬停时颜色变深 */
+}
+
+.payment-method {
+
+}
+
+.info {
+  margin-top: 0px;
+}
+
+/* Add a black border to the seller info and adjust its layout */
+.seller-info {
+  flex: none; /* Do not grow or shrink */
+  height: 50vh; /* Set the height to half the viewport height */
+  border: 1px solid black;
+  border-radius: 3%;
+  padding: 20px;
+  margin-right: 45px; /* Add some margin to the right */
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  width: calc(100% / 6.5); /* 设定宽度为界面宽度的1/6.5 */
+  text-align: left; /* 确保文本靠左对齐 */
+}
+
+.recycle-info {
+  flex: none; /* Do not grow or shrink */
+  height: 50vh; /* Set the height to half the viewport height */
+  border: 1px solid black;
+  border-radius: 3%;
+  padding: 20px;
+  margin-right: 45px; /* Add some margin to the right */
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  width: calc(100% / 6.5); /* 设定宽度为界面宽度的1/6.5 */
+  text-align: left; /* 确保文本靠左对齐 */
+}
+
+
+.seller-name {
+  font-weight: bold; /* 字体加粗 */
+  margin-bottom: 10px; /* 与下一个元素的间距 */
+}
+
+.contact-seller,
+.see-other-items {
+  display: block; /* 占满整行 */
+  color: #007bff; /* 链接颜色 */
+  margin-bottom: 10px; /* 与下一个元素的间距 */
+  text-decoration: none; /* 去除下划线 */
+}
+
+.contact-seller:hover,
+.see-other-items:hover {
+  text-decoration: underline; /* 鼠标悬停时下划线 */
+}
+
+.seller-note {
+  font-size: 0.9rem; /* 字体大小 */
+  color: #555; /* 字体颜色 */
+  border-top: 1px dotted #ccc; /* 上边框点线 */
+  padding-top: 10px; /* 上内边距 */
+  margin-top: 10px; /* 上外边距 */
+}
+
+.new-section {
+  width: 100%; /* 宽度与屏幕一样宽 */
+  background-color: #f5f5f5; /* 灰色背景 */
+  padding: 20px; /* 添加内边距 */
+  box-sizing: border-box; /* 确保内边距不影响总宽度 */
+  margin-right: 40px;
+}
+
+.info p {
+  line-height: 2;  /* Adjust the value as needed */
+}
+
+.bold {
+  font-weight: bold;
+}

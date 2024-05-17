@@ -1,0 +1,80 @@
+spring:
+  servlet:
+    multipart.max-file-size: 10MB
+    multipart.max-request-size: 50MB
+
+  main:
+    allow-bean-definition-overriding: true
+  web:
+    resources:
+      static-locations: classpath:/META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/, classpath:/templates/
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:~/ewaste
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 123456
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: zzhao84@sheffield.ac.uk
+    password: ahjybncbplqbuwab
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  thymeleaf:
+    prefix: classpath:/templates
+    cache: false
+
+paypal:
+  clientid:
+  secret:
+  mode: sandbox
+  successUrl: http://127.0.0.1:8080/paypal/success
+  cancelUrl: http://127.0.0.1:8080/paypal/cancel
+
+server:
+  port: 8080
+
+mybatis-plus:
+  configuration:
+    call-setters-on-nulls: true
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: "null"
+  global-config:
+    db-config:
+      update-strategy: ignored
+  mapper-locations: classpath:/repository/**.xml
+  type-aliases-package: uk.shef.msc8.ewaste.domain.user.repository.mapper
+
+mybatis:
+  mapper-locations: classpath:/repository/**.xml
+  type-aliases-package: uk.shef.msc8.ewaste.domain.user.repository.mapper
+
+app:
+  auth:
+    tokenSecret: 04ca023b39512e46d0c2cf4b48d5aac61d34302994c87ed4eff225dcf3b0a218739f3897051a057f9b846a69ea2927a587044164b7bae5e1306219d50b588cb1
+    tokenExpirationMsec: 864000000
+  cors:
+    allowedOrigins: http://localhost:3000, http://localhost:3001, http://localhost:8080
+  oauth2:
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2/redirect
+      - myandroidapp://oauth2/redirect
+      - myiosapp://oauth2/redirect
+      - 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true

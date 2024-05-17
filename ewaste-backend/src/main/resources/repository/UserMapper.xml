@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="uk.shef.msc8.ewaste.domain.user.repository.mapper.UserMapper">
+
+    <select id="getUserByLoginName" resultType="uk.shef.msc8.ewaste.domain.user.repository.po.UserPO" parameterType="String">
+        select *
+            from t_user
+        where login_name = #{loginName} and is_deleted = 0
+    </select>
+
+    <select id="getUserByEmail" resultType="uk.shef.msc8.ewaste.domain.user.repository.po.UserPO" parameterType="String">
+        select *
+            from t_user
+        where email = #{email} and is_deleted = 0
+    </select>
+
+</mapper>
